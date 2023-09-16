@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This module contains a square"""
+
+"""
+This module contains a square
+"""
 
 
 class Square:
