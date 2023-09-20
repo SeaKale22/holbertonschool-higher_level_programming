@@ -40,4 +40,5 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty_list(self):
         """tests for empty list"""
         result = max_integer([])
+        self.assertEqual(result, None)
 
