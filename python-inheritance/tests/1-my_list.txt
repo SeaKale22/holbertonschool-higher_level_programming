@@ -1,0 +1,14 @@
+# 1-mylist test cases
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> list1 = MyList([5, 4, 3, 2, 1])
+
+>>> list1.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> list2 = MyList([1, 2, "three"])
+
+>>> list2.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'
