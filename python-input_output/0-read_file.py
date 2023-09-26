@@ -6,6 +6,6 @@ def read_file(file_name=""):
     """Reads a file
     Param file_name: the file to read from
     """
-    with open(file_name) as f:
+    with open(file_name, encoding="UTF8") as f:
         content = f.read()
         print(content)
