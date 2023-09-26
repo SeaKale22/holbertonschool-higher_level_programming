@@ -7,6 +7,5 @@ def read_file(file_name=""):
     Param file_name: the file to read from
     """
     with open(file_name) as f:
-        for line in f:
-            print(line, end='')
-        print()
+        content = f.read()
+        print(content)
