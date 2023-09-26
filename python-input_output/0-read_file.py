@@ -6,6 +6,6 @@ def read_file(file_name=""):
     """Reads a file
     Param file_name: the file to read from
     """
-    with open(file_name, "r") as f:
+    with open(file_name) as f:
         for line in f:
             print(line)
