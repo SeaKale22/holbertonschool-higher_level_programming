@@ -7,5 +7,4 @@ def read_file(file_name=""):
     Param file_name: the file to read from
     """
     with open(file_name, encoding="UTF8") as f:
-        content = f.read()
-        print(content)
+        print(f.read())
