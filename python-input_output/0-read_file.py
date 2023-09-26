@@ -8,4 +8,5 @@ def read_file(file_name=""):
     """
     with open(file_name) as f:
         for line in f:
-            print(line)
+            print(line, end='')
+        print()
