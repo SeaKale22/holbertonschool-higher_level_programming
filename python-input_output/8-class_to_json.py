@@ -5,7 +5,7 @@
 def class_to_json(obj):
     """Returns dictionary decrption of object"""
     json_dict = {}
-    for attribute in dir(obj):
+    for attribute in obj.__dict__:
         attribute_value = getattr(obj, attribute)
         if isinstance(attribute_value, (list, dict, str, int, bool)):
             json_dict[attribute] = attribute_value
