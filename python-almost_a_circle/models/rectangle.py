@@ -89,7 +89,6 @@ class Rectangle(Base):
                 print("#", end='')
             print()
 
-
     def __str__(self):
         """Returns string rep of Rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
