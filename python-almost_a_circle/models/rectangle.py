@@ -9,6 +9,10 @@ class Rectangle(Base):
     """class for Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initilization for Rectangle"""
+        self.valid("width", width)
+        self.valid("height", height)
+        self.valid("x", x)
+        self.valid("y", y)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -23,6 +27,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """width setter"""
+        self.valid("width", value)
         self.__width = value
 
     @property
@@ -33,6 +38,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """height setter"""
+        self.valid("height", value)
         self.__height = value
 
     @property
@@ -43,6 +49,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """x setter"""
+        self.valid("x", value)
         self.__x = value
 
     @property
@@ -53,4 +60,16 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """y setter"""
+        self.valid("y", value)
         self.__y = value
+
+    def valid(self, attrib_name, value):
+        """validates attributes"""
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(attrib_name))
+        if attrib_name == "width" or attrib_name == "height":
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(attrib_name))
+        if attrib_name == "x" or attrib_name == "y":
+            if value < 0:
+                raise ValueError("{} msut be >= 0".format(attrib_name))
