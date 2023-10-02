@@ -80,10 +80,15 @@ class Rectangle(Base):
 
     def display(self):
         """Pritns the rectangle to stdout"""
+        for num in range(self.__y):
+            print()
         for num in range(self.__height):
+            for num in range(self.__x):
+                print(" ", end='')
             for num in range(self.__width):
                 print("#", end='')
             print()
+
 
     def __str__(self):
         """Returns string rep of Rectangle"""
