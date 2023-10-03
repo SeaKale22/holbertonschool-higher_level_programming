@@ -119,3 +119,8 @@ class Rectangle(Base):
                     self.__x = arg
                 if i == 4:
                     self.__y = arg
+
+    def to_dictionary(self):
+        """Returns dictionary rep of Rectangle"""
+        return {"id": self.id, "width": self.__width,
+                "height": self.__height, "x": self.__x, "y": self.__y}
