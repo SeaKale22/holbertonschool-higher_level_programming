@@ -2,6 +2,10 @@
 """Module for base class"""
 
 
+import json
+
+
+
 class Base:
 
     """Base class for other project classes"""
@@ -15,3 +19,8 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """Returns json string rep of list of dictionaries"""
+        if list_dictionaries is not None or len(list_dictionaries) != 0:
+            return json.dumps(list_dictionaries)
