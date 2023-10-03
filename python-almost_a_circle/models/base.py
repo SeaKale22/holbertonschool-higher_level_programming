@@ -19,7 +19,6 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    
     def to_json_string(list_dictionaries):
         """Returns json string rep of list of dictionaries"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
