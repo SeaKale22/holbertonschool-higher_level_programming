@@ -38,3 +38,11 @@ class Base:
         jstring = cls.to_json_string(list_dict)
         with open(file_name, "w") as f:
             f.write(jstring)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns a lsit of the json string rep"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
