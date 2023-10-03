@@ -5,7 +5,6 @@
 import json
 
 
-
 class Base:
 
     """Base class for other project classes"""
