@@ -35,3 +35,12 @@ class test_Base_to_json_str(unittest.TestCase):
         dictionary = r1.to_dictionary()
         json_dict = Base.to_json_string([dictionary])
         self.assertEqual(json_dict, '[{"id": 77, "width": 10, "height": 7, "x": 2, "y": 8}]')
+
+    def test_wrong(self):
+        """tests incorrect useage"""
+        r1 = Rectangle(2, 2, 3, 4)
+        json_dict = Base.to_json_string([])
+        self.assertEqual(json_dict, "[]")
+        with self.assertRaises(TypeError) as e:
+            r2 = Rectangle(2, 2, 3, 3)
+            json_dict2 = Base.to_json_string()
