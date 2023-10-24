@@ -23,7 +23,8 @@ if __name__ == "__main__":
         # execute query
         for row in cursor.fetchall():
             # print each state
-            print(row)
+            if row[1] == state_name:
+                print(row)
         cursor.close()
         database_connection.close()
         # close cursor and connection to database
