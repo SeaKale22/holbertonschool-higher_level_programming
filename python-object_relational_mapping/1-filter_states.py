@@ -18,7 +18,8 @@ def list_states_N(username, password, database):
     # get the states
     for row in cursor.fetchall():
         # print each state
-        print(row)
+        if row[1][0] == 'N':
+            print(row)
 
     cursor.close()
     database_connection.close()
