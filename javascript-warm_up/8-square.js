@@ -8,7 +8,7 @@ if (isNaN(sizeOfSquare)) {
 }
 if (!isNaN(sizeOfSquare)) {
   for (let i = 0; i < sizeOfSquare; i++) {
-    squareLine = squareLine + 'x';
+    squareLine = squareLine + 'X';
   }
   for (let j = 0; j < sizeOfSquare; j++) {
     console.log(squareLine);
