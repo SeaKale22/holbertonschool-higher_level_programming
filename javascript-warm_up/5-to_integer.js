@@ -6,5 +6,5 @@ const convToInt = parseInt(firstArg);
 if (isNaN(convToInt)) {
   console.log('Not a number');
 } else {
-  console.log('My Number: ' + convToInt);
+  console.log('My number: ' + convToInt);
 }
