@@ -4,8 +4,8 @@
 
 const fs = require('fs');
 
-filePath = process.argv[2];
-writeData = process.argv[3];
+const filePath = process.argv[2];
+const writeData = process.argv[3];
 
 function writeError (err) {
   if (err) {
