@@ -10,7 +10,7 @@ function countWedgeMovies (err, response, body) {
   const data = JSON.parse(body);
   const moviesList = data.results;
   let count = 0;
-  for (let i = 0; i < moviesList.length ; i++) {
+  for (let i = 0; i < moviesList.length; i++) {
     const currentMovie = moviesList[i];
     const movieChars = currentMovie.characters;
     for (const charString of movieChars) {
