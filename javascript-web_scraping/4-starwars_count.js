@@ -13,8 +13,10 @@ function countWedgeMovies (err, response, body) {
   for (let i = 0; i < 7; i++) {
     const currentMovie = moviesList[i];
     const movieChars = currentMovie.characters;
-    if (movieChars.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-      count++;
+    for (const charString of movieChars) {
+      if (charString.includes('18')) {
+        count++;
+      }
     }
   }
   console.log(count);
