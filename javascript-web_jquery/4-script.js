@@ -1,4 +1,3 @@
-#!/usr/bin/node
 
 const header = $('header');
 const toggleDiv = $('#toggle_header');

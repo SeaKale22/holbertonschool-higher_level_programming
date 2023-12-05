@@ -1,4 +1,3 @@
-#!/usr/bin/node
 
 const header = $('header');
 const red = $('#red_header');
